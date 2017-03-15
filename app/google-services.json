@@ -1,0 +1,75 @@
+{
+  "project_info": {
+    "project_number": "57901315506",
+    "firebase_url": "https://reptileapp.firebaseio.com",
+    "project_id": "reptileapp",
+    "storage_bucket": "reptileapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57901315506:android:5d4e562704b5077f",
+        "android_client_info": {
+          "package_name": "com.reptile.nomad.ReptileApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57901315506-1t0j4nknukv3hljui2gbuemheeht9773.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reptile.nomad.ReptileApp",
+            "certificate_hash": "C37348D0943E766D5435E517B4023B3440605330"
+          }
+        },
+        {
+          "client_id": "57901315506-48plenpdcbcv8qv39r1tqvfkqqc384dq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reptile.nomad.ReptileApp",
+            "certificate_hash": "4A5E224869D80FBC04E87DCB0112519DDC0929B6"
+          }
+        },
+        {
+          "client_id": "57901315506-6cbdrse7hl0jmt6m6tc2q40ggfjte3sg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.reptile.nomad.ReptileApp",
+            "certificate_hash": "3AA37AB02FB420336F71A7E256F756132F0B47C1"
+          }
+        },
+        {
+          "client_id": "57901315506-i5tu71h09rsiia3d6fm8grk8emnh5bt6.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "57901315506-ufe2rfol5o8r9goivbcpjb6jtq04tjc1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZlk9q60yd_AOy9oc4vbWpKAqSvvfYOYY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57901315506-i5tu71h09rsiia3d6fm8grk8emnh5bt6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

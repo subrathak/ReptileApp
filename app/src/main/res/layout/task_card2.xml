@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="14dp"
+            android:padding="16dp">
+
+            <com.reptile.nomad.ReptileApp.CircularNetworkImageView
+                android:id="@+id/feedProfileImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+
+                android:src="@drawable/ic_face_black_24dp" />
+
+            />
+
+            <TextView
+                android:id="@+id/feedNameTextView"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/feedProfileImageView"
+                android:layout_toRightOf="@+id/feedProfileImageView"
+                android:paddingTop="5dp"
+                android:text="Name" />
+
+            <TextView
+                android:id="@+id/feedTaskTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feedNameTextView"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp"
+                android:text="Pending tasks go here. "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:layout_below="@id/feedTaskTextView"
+                android:layout_marginTop="10dp">
+
+
+                <ImageButton
+                    android:id="@+id/commentOnTaskButton"
+                    android:layout_width="wrap_content"
+                    android:background="@color/white"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chat_bubble_outline_black_24dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_toLeftOf="@+id/TaskCommentCount"
+                    android:layout_toStartOf="@+id/TaskCommentCount" />
+
+                <TextView
+                    android:id="@+id/TaskLikeCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/taskLikeButton"
+                    android:layout_toEndOf="@+id/taskLikeButton" />
+
+                <TextView
+                    android:id="@+id/TaskCommentCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ripples"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:layout_marginRight="36dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_alignTop="@id/commentOnTaskButton"
+                    android:layout_marginTop="3dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <com.like.LikeButton
+                    app:icon_type="thumb"
+                    app:icon_size="30dp"
+                    app:liked="false"
+                    app:circle_start_color="@color/colorPrimary"
+                    app:circle_end_color="@color/colorAccent"
+                    app:dots_primary_color="@color/colorAccent"
+                    app:dots_secondary_color="@color/colorPrimary"
+                    app:anim_scale_factor="1"
+                    android:layout_width="50dp"
+                    android:padding="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/taskLikeButton"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_alignParentStart="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

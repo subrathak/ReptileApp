@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:mActivity="com.reptile.nomad.ReptileApp.DetailedViewActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        android:weightSum="100"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="35"
+            android:background="#2196F3"
+            android:transitionName="colourCover"
+            ><![CDATA[
+
+            />
+
+
+            ]]>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="16sp"
+                android:text="Large Text"
+                android:textColor="@color/white"
+                android:id="@+id/TaskTextViewDetailed"
+                android:layout_above="@+id/feedNameTextView"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline :"
+                android:id="@+id/DeadlineTextViewDetailed"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Status : "
+                android:textColor="@color/white"
+                android:id="@+id/statusTextView"
+                android:layout_above="@+id/DeadlineTextViewDetailed"
+                android:layout_alignLeft="@+id/DeadlineTextViewDetailed"
+                android:layout_alignStart="@+id/DeadlineTextViewDetailed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="active"
+                android:textColor="@color/white"
+                android:id="@+id/detailedViewTaskStatus"
+                android:layout_alignTop="@+id/statusTextView"
+                android:layout_toRightOf="@+id/statusTextView"
+                android:layout_toEndOf="@+id/statusTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:textColor="@color/white"
+                android:id="@+id/deadlineTV"
+                android:layout_alignTop="@+id/DeadlineTextViewDetailed"
+                android:layout_toRightOf="@+id/DeadlineTextViewDetailed"
+                android:layout_toEndOf="@+id/DeadlineTextViewDetailed" />
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:layout_width="350dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_height="40dp"
+                android:id="@+id/progressBarDetailed"
+                android:indeterminate="false"
+                android:progressBackgroundTint="@color/white"
+                app:rcRadius="9dp"
+                app:rcBackgroundPadding="3dp"
+                app:rcReverse="false"
+                app:rcProgressColor="#FFC400"
+                app:rcSecondaryProgressColor="@color/reptile_green"
+                app:rcBackgroundColor="@color/cardview_dark_background"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="45"
+            >
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+
+            >
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/CommentsRecyclerView"
+                android:layout_height="wrap_content"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DetailedViewCommentEntryEditText"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/detailedSubmitCommentImageView"
+                android:layout_toStartOf="@+id/detailedSubmitCommentImageView" />
+            <ImageButton
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/detailedSubmitCommentImageView"
+                android:src="@drawable/ic_send_black_24dp"
+                android:layout_alignTop="@+id/DetailedViewCommentEntryEditText"
+                android:layout_alignRight="@+id/CommentsRecyclerView"
+                android:layout_alignEnd="@+id/CommentsRecyclerView" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout
+    >

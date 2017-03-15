@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="10dp"
+    android:longClickable="true"
+    android:layout_height="match_parent">
+<TextView
+
+    android:layout_width="1000dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/searchUserNameTextView"
+    android:text="Bobby Jindal"
+    android:layout_marginTop="10dp"
+    android:textSize="20dp"
+>
+
+</TextView>
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Delete?"
+       android:visibility="gone"
+       android:id="@+id/deleteUserTextView"
+       android:layout_alignBaseline="@id/searchUserNameTextView"
+       android:layout_alignParentRight="true"
+       android:layout_marginRight="20dp"
+       android:textSize="16dp"
+       android:textColor="#FF2222"
+       />
+   </RelativeLayout>

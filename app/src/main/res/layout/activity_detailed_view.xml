@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:mActivity="com.reptile.nomad.ReptileApp.DetailedViewActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/mainRelativeLayout"
+            android:layout_marginRight="10dp"
+            android:background="@color/cardview_light_background"
+            android:transitionName="colourCover"
+            android:padding="10dp"
+            >
+
+            <com.reptile.nomad.ReptileApp.CircularNetworkImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/DPimageView"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/grey_square"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Test containing the task of this user."
+                android:textColor="@color/black"
+                android:id="@+id/TaskTextViewDetailed"
+                android:layout_below="@+id/NameTextViewDetailed"
+                android:layout_alignLeft="@+id/NameTextViewDetailed"
+                android:layout_alignStart="@+id/NameTextViewDetailed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:id="@+id/NameTextViewDetailed"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/DeadlineTextViewDetailed" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Deadline :"
+                android:id="@+id/DeadlineTextViewDetailed"
+
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Status : "
+                android:id="@+id/statusTextView"
+                android:layout_above="@+id/deadlineTV"
+                android:layout_alignStart="@+id/DeadlineTextViewDetailed" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="active"
+                android:id="@+id/detailedViewTaskStatus"
+                android:layout_alignTop="@+id/statusTextView"
+                android:layout_toRightOf="@+id/statusTextView"
+                android:layout_toEndOf="@+id/statusTextView" />
+
+            <com.github.curioustechizen.ago.RelativeTimeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Small Text"
+                android:id="@+id/deadlineTV"
+                android:layout_alignTop="@+id/DeadlineTextViewDetailed"
+                android:layout_toRightOf="@+id/DeadlineTextViewDetailed"
+                android:layout_toEndOf="@+id/DeadlineTextViewDetailed" />
+
+            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                android:layout_width="350dp"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_height="10dp"
+                android:id="@+id/progressBarDetailed"
+                android:indeterminate="false"
+                android:progressBackgroundTint="@color/white"
+                app:rcRadius="4dp"
+                app:rcBackgroundPadding="3dp"
+                app:rcReverse="false"
+                app:rcProgressColor="@color/material_blue300"
+                app:rcSecondaryProgressColor="@color/reptile_green"
+                app:rcBackgroundColor="@color/cardview_light_background"
+                android:layout_above="@+id/statusTextView"
+                android:layout_alignStart="@+id/statusTextView" />
+
+        </RelativeLayout>
+
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/CommentsRecyclerView"
+                android:layout_below="@id/mainRelativeLayout"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+
+
+</RelativeLayout
+    >
