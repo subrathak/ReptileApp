@@ -13,6 +13,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.multidex.MultiDex;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
@@ -29,8 +30,10 @@ import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 //import com.nostra13.universalimageloader.core.ImageLoader;
@@ -231,6 +234,10 @@ public class Reptile extends Application {
             String email = user.getEmail();
             Uri photoUrl = user.getPhotoUrl();
 
+            if(name==null){
+                name = email;
+            }
+
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
 
@@ -239,15 +246,18 @@ public class Reptile extends Application {
             // FirebaseUser.getToken() instead.
             String uid = user.getUid();
             try {
-                toSendToServer.put("name", name);
+                toSendToServer.put("firstname", name);
                 toSendToServer.put("deviceid", DeviceID);
                 toSendToServer.put("type", "email");
                 toSendToServer.put("fcmtoken", FirebaseInstanceId.getInstance().getToken());
-                toSendToServer.put("accountid", uid);
-                toSendToServer.put("imageuri", photoUrl);
+                toSendToServer.put("accountid", 123);
+//                toSendToServer.put("imageuri", photoUrl);
+                toSendToServer.put("username",email);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
+            mSocket.emit("signup", toSendToServer);
+
 
         }
     }
@@ -303,6 +313,7 @@ public class Reptile extends Application {
         }
     }
 
+
     public static void login(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
@@ -314,6 +325,30 @@ public class Reptile extends Application {
                     String name = user.getDisplayName();
                     String email = user.getEmail();
                     Uri photoUrl = user.getPhotoUrl();
+                    String accessToken;
+                    user.getToken(true)
+                            .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+                                @Override
+                                public void onComplete(@NonNull com.google.android.gms.tasks.Task<GetTokenResult> task) {
+                                    if (task.isSuccessful()) {
+                                        String idToken = task.getResult().getToken();
+                                        try {
+                                            JSONObject loginJSON = new JSONObject();
+                                            loginJSON.put("accesstoken", idToken);
+                                            loginJSON.put("type", "email");
+                                            mSocket.emit("login", loginJSON);
+
+                                        } catch (JSONException e) {
+                                            e.printStackTrace();
+                                        }
+                                        // Send token to your backend via HTTPS
+                                        // ...
+                                    } else {
+                                        // Handle error -> task.getException();
+                                    }
+                                }
+
+                            });
 
                     // Check if user's email is verified
                     boolean emailVerified = user.isEmailVerified();
@@ -355,7 +390,7 @@ public class Reptile extends Application {
                     try {
                         JSONObject loginJSON = new JSONObject();
                         loginJSON.put("accesstoken", accesstoken);
-                        loginJSON.put("accountid", accountid);
+                        loginJSON.put("email", accountid);
                         loginJSON.put("type", "google");
                         mSocket.emit("login", loginJSON);
                     } catch (JSONException e) {

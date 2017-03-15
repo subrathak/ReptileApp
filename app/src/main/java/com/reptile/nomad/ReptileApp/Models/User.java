@@ -82,7 +82,7 @@ public class User {
         try
         {
             JSONObject input = new JSONObject(inputString);
-            User newUser = new User(input.getString("firstname"),input.getString("lastname"));
+            User newUser = new User(input.getString("firstname"),input.getString("firstname"));
             if(input.has("username")) {
                 newUser.userName = input.getString("username");
 //                if (!input.getString("username").isEmpty()) {
@@ -120,7 +120,7 @@ public class User {
         try
         {
             String id = input.getString("_id");
-            User newUser = new User(input.getString("firstname"),input.getString("lastname"));
+            User newUser = new User(input.getString("firstname"),input.getString("firstname"));
             if(input.has("username")) {
                 newUser.userName = input.getString("username");
 //                if (!input.getString("username").isEmpty()) {

@@ -1,7 +1,9 @@
 package com.reptile.nomad.ReptileApp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -89,6 +91,11 @@ public class SignupActivity extends AppCompatActivity {
                                     Toast.makeText(SignupActivity.this, "Authentication failed." + task.getException(),
                                             Toast.LENGTH_SHORT).show();
                                 } else {
+                                    SharedPreferences.Editor editor =  PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+                                    editor.putString(QuickPreferences.loginType,QuickPreferences.emailLogin);
+//                                    editor.putString("pictureURI",profile.getProfilePictureUri(400,400).toString());
+                                    editor.apply();
+                                    Reptile.emailSignUp();
                                     startActivity(new Intent(SignupActivity.this, MainActivity.class));
                                     finish();
                                 }

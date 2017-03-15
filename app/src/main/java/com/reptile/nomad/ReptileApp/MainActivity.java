@@ -126,16 +126,16 @@ public class MainActivity extends AppCompatActivity
         {
             Reptile.mSocket.connect();
         }
-        if(Profile.getCurrentProfile()!=null&&Reptile.loginMethod(getApplicationContext())==Reptile.FACEBOOK_LOGIN) {
-            nameTextView.setText(Profile.getCurrentProfile().getName());
-        }
-        else if(Reptile.loginMethod(getApplicationContext())==Reptile.GOOGLE_LOGIN)
-        {
-            nameTextView.setText(PreferenceManager.getDefaultSharedPreferences(this).getString("fullname"," "));
-        }
-        if(QuickPreferences.usernameSelected){
-            nameTextView.setText(Reptile.mUser.userName);
-        }
+//        if(Profile.getCurrentProfile()!=null&&Reptile.loginMethod(getApplicationContext())==Reptile.FACEBOOK_LOGIN) {
+//            nameTextView.setText(Profile.getCurrentProfile().getName());
+//        }
+//        else if(Reptile.loginMethod(getApplicationContext())==Reptile.GOOGLE_LOGIN)
+//        {
+//            nameTextView.setText(PreferenceManager.getDefaultSharedPreferences(this).getString("fullname"," "));
+//        }
+//        if(QuickPreferences.usernameSelected){
+//            nameTextView.setText(Reptile.mUser.userName);
+//        }
         ImageLoader imageLoader = ImageLoader.getInstance();
         if(Reptile.mUser==null||Reptile.mUser.imageURI==null)
             imageLoader.displayImage(PreferenceManager.getDefaultSharedPreferences(this).getString("pictureURI"," "),profilePicture);
@@ -144,12 +144,6 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        Log.d(TAG, "Got Activity Result with Result Code "+ String.valueOf(resultCode)+ "And Request Code " + String.valueOf(requestCode));
-//
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -307,10 +301,10 @@ public class MainActivity extends AppCompatActivity
 
         }
 
-        SharedPreferences settings = getSharedPreferences(QuickPreferences.appStatusSharedPreference, 0);
-        if(settings.getInt("firstTime",1) == 1){
-            startActivity(new Intent(this, Username.class));
-        }
+//        SharedPreferences settings = getSharedPreferences(QuickPreferences.appStatusSharedPreference, 0);
+//        if(settings.getInt("firstTime",1) == 1){
+//            startActivity(new Intent(this, Username.class));
+//        }
 
     }
 
@@ -628,13 +622,7 @@ public class MainActivity extends AppCompatActivity
             if (requestCode == GALLERY_ACTIVITY_CODE) {
                 if(resultCode == Activity.RESULT_OK){
                     String picturePath = data.getStringExtra("picturePath");
-                    //perform Crop on the Image Selected from Gallery
-//                    sendImage(picturePath);
                     performCrop(picturePath);
-//=======
-//                    Bitmap bitmap = BitmapFactory.decodeFile(picturePath);
-//                    sendProfilePicture(bitmap);
-//>>>>>>> fd72c7d43398ef32730e5ffeefbff47dcd15a3bb
                 }
             }
 
@@ -739,39 +727,6 @@ public class MainActivity extends AppCompatActivity
 //        sendImage(user_dp_path); ////////////////////SENDING TO SERVER HERE
         return mediaFile;
     }
-
-//    public void sendImage(String path)
-//    {
-//        JSONObject sendData = new JSONObject();
-//        try{
-//            sendData.put("image", encodeImage(path));
-//            sendData.put("user",Reptile.mUser.id);
-//            Reptile.mSocket.emit("changePicture",sendData);
-//            Log.d("SendImage","sending image");
-//        }catch(JSONException e){
-//        }
-//    }
-
-//    private String encodeImage(String path)
-//    {
-//        File imagefile = new File(path);
-//        FileInputStream fis = null;
-//        try{
-//            fis = new FileInputStream(imagefile);
-//        }catch(FileNotFoundException e){
-//            e.printStackTrace();
-//        }
-//        Bitmap bm = BitmapFactory.decodeStream(fis);
-//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-//        bm.compress(Bitmap.CompressFormat.JPEG,100,baos);
-//        byte[] b = baos.toByteArray();
-//        String encImage = Base64.encodeToString(b, Base64.DEFAULT);
-//        //Base64.de
-//        return encImage;
-//
-//    }
-
-
 
 }
 

@@ -10,6 +10,7 @@ public class QuickPreferences {
     public static final String tasksUpdated = "tasksupdated";
     public static final String loginType = "logintype";
     public static final String facebookLogin = "facebookLogin";
+    public static final String emailLogin = "email";
     public static final String googleLogin = "googleLogin";
     public static final String appStatusSharedPreference = "appStatusSharedPreference";
     public static Boolean usernameSelected = Boolean.FALSE;
