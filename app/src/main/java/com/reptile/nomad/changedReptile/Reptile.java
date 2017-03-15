@@ -235,6 +235,7 @@ public class Reptile extends Application {
                                         toSendToServer.put("firstname", user.getEmail());
                                         toSendToServer.put("deviceid", DeviceID);
                                         toSendToServer.put("type", "email");
+                                        toSendToServer.put("email", user.getEmail());
                                         toSendToServer.put("accesstoken", idToken);
                                         toSendToServer.put("fcmtoken", FirebaseInstanceId.getInstance().getToken());
                                         toSendToServer.put("accountid", 123);
@@ -278,83 +279,84 @@ public class Reptile extends Application {
         mSocket.emit("signup", toSendToServer);
     }
 
-//    public static void facebookSignUp() {
-//        if (Profile.getCurrentProfile() != null) {
-//            JSONObject toSendToServer = new JSONObject();
-//            try {
-//
-//                toSendToServer.put("deviceid", DeviceID);
-//                toSendToServer.put("type", "facebook");
-//                toSendToServer.put("accountid", Profile.getCurrentProfile().getId());
-//                toSendToServer.put("accesstoken", AccessToken.getCurrentAccessToken().getToken());
-//                toSendToServer.put("firstname", Profile.getCurrentProfile().getFirstName());
-//                toSendToServer.put("lastname", Profile.getCurrentProfile().getLastName());
-//                toSendToServer.put("fcmtoken", FirebaseInstanceId.getInstance().getToken());
-//                toSendToServer.put("username", Profile.getCurrentProfile().getFirstName());
-//                toSendToServer.put("imageuri", Profile.getCurrentProfile().getProfilePictureUri(400, 400));
-//
-//
-//                Log.i("User Registration", toSendToServer.toString());
-//            } catch (JSONException e) {
-//                e.printStackTrace();
-//            }
-//            mUser = new User(Profile.getCurrentProfile().getFirstName(), Profile.getCurrentProfile().getLastName());
-//            mUser.accountid = Profile.getCurrentProfile().getId();
-//            mSocket.emit("signup", toSendToServer);
-//
-//        }
-//    }
-
 
     public static void login(Context context) {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // Name, email address, and profile photo Url
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+            Uri photoUrl = user.getPhotoUrl();
+            String accessToken;
+            user.getToken(true)
+                    .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+                        @Override
+                        public void onComplete(@NonNull com.google.android.gms.tasks.Task<GetTokenResult> task) {
+                            if (task.isSuccessful()) {
+                                String idToken = task.getResult().getToken();
+                                try {
+                                    JSONObject loginJSON = new JSONObject();
+                                    loginJSON.put("accesstoken", idToken);
+                                    loginJSON.put("type", "email");
+                                    mSocket.emit("login", loginJSON);
 
-        switch (sharedPreferences.getString(QuickPreferences.loginType, "null")) {
-            case "email":
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                if (user != null) {
-                    // Name, email address, and profile photo Url
-                    String name = user.getDisplayName();
-                    String email = user.getEmail();
-                    Uri photoUrl = user.getPhotoUrl();
-                    String accessToken;
-                    user.getToken(true)
-                            .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
-                                @Override
-                                public void onComplete(@NonNull com.google.android.gms.tasks.Task<GetTokenResult> task) {
-                                    if (task.isSuccessful()) {
-                                        String idToken = task.getResult().getToken();
-                                        try {
-                                            JSONObject loginJSON = new JSONObject();
-                                            loginJSON.put("accesstoken", idToken);
-                                            loginJSON.put("type", "email");
-                                            mSocket.emit("login", loginJSON);
-
-                                        } catch (JSONException e) {
-                                            e.printStackTrace();
-                                        }
-                                        // Send token to your backend via HTTPS
-                                        // ...
-                                    } else {
-                                        // Handle error -> task.getException();
-                                    }
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
                                 }
+                                // Send token to your backend via HTTPS
+                                // ...
+                            } else {
+                                // Handle error -> task.getException();
+                            }
+                        }
 
-                            });
+                    });
 
-                    // Check if user's email is verified
-                    boolean emailVerified = user.isEmailVerified();
+        }  else
+            context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
-                    // The user's ID, unique to the Firebase project. Do NOT use this value to
-                    // authenticate with your backend server, if you have one. Use
-                    // FirebaseUser.getToken() instead.
-                    String uid = user.getUid();
-
-                }
-            case "null":
-                context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                return;
-//            case QuickPreferences.facebookLogin:
+//        switch (sharedPreferences.getString(QuickPreferences.loginType, "null")) {
+//            case "email":
+//                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//                if (user != null) {
+//                    // Name, email address, and profile photo Url
+//                    String name = user.getDisplayName();
+//                    String email = user.getEmail();
+//                    Uri photoUrl = user.getPhotoUrl();
+//                    String accessToken;
+//                    user.getToken(true)
+//                            .addOnCompleteListener(new OnCompleteListener<GetTokenResult>() {
+//                                @Override
+//                                public void onComplete(@NonNull com.google.android.gms.tasks.Task<GetTokenResult> task) {
+//                                    if (task.isSuccessful()) {
+//                                        String idToken = task.getResult().getToken();
+//                                        try {
+//                                            JSONObject loginJSON = new JSONObject();
+//                                            loginJSON.put("accesstoken", idToken);
+//                                            loginJSON.put("type", "email");
+//                                            mSocket.emit("login", loginJSON);
+//
+//                                        } catch (JSONException e) {
+//                                            e.printStackTrace();
+//                                        }
+//                                        // Send token to your backend via HTTPS
+//                                        // ...
+//                                    } else {
+//                                        // Handle error -> task.getException();
+//                                    }
+//                                }
+//
+//                            });
+//
+//                }  else
+//                    context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+//
+//            case "null":
+//                context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+//                return;
+//
+//            case QuickPreferences.googleLogin:
 //                String accesstoken = sharedPreferences.getString("accesstoken", null);
 //                String accountid = sharedPreferences.getString("accountid", null);
 //
@@ -362,10 +364,9 @@ public class Reptile extends Application {
 //                    try {
 //                        JSONObject loginJSON = new JSONObject();
 //                        loginJSON.put("accesstoken", accesstoken);
-//                        loginJSON.put("accountid", accountid);
-//                        loginJSON.put("type", "facebook");
+//                        loginJSON.put("email", accountid);
+//                        loginJSON.put("type", "google");
 //                        mSocket.emit("login", loginJSON);
-//
 //                    } catch (JSONException e) {
 //                        e.printStackTrace();
 //                    }
@@ -373,34 +374,13 @@ public class Reptile extends Application {
 //                    context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 //
 //                return;
+//
+//            default:
+//                context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+//
+//                return;
 
-            case QuickPreferences.googleLogin:
-                String accesstoken = sharedPreferences.getString("accesstoken", null);
-                String accountid = sharedPreferences.getString("accountid", null);
-
-                if (accesstoken != null && accountid != null) {
-                    try {
-                        JSONObject loginJSON = new JSONObject();
-                        loginJSON.put("accesstoken", accesstoken);
-                        loginJSON.put("email", accountid);
-                        loginJSON.put("type", "google");
-                        mSocket.emit("login", loginJSON);
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                } else
-                    context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-
-                return;
-
-            default:
-                context.startActivity(new Intent(context, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-
-                return;
-
-
-        }
-
+//        }
 
     }
 
@@ -410,20 +390,12 @@ public class Reptile extends Application {
 
         switch (sharedPreferences.getString(QuickPreferences.loginType, "null")) {
 
-
-//            case QuickPreferences.facebookLogin:
-//                Log.d(TAG, "Facebook Login");
-//                return FACEBOOK_LOGIN;
-
-
             case QuickPreferences.googleLogin:
                 Log.d(TAG, "Google Login");
                 return GOOGLE_LOGIN;
 
             default:
                 return 0;
-
-
         }
     }
 

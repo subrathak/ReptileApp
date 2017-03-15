@@ -132,6 +132,9 @@ public class MainActivity extends AppCompatActivity
 //        if(QuickPreferences.usernameSelected){
 //            nameTextView.setText(Reptile.mUser.userName);
 //        }
+        if(Reptile.mUser!=null){
+            nameTextView.setText(Reptile.mUser.userName);
+        }
         ImageLoader imageLoader = ImageLoader.getInstance();
         if(Reptile.mUser==null||Reptile.mUser.imageURI==null)
             imageLoader.displayImage(PreferenceManager.getDefaultSharedPreferences(this).getString("pictureURI"," "),profilePicture);
@@ -284,18 +287,18 @@ public class MainActivity extends AppCompatActivity
 
         Intent fcmrefresh = new Intent(this, MyFirebaseInstanceIDService.class);
         startService(fcmrefresh);
-        if(!isMyServiceRunning(DeadlineTrackerService.class)){
-            final Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    Intent serviceIntetnt = new Intent(MainActivity.this,DeadlineTrackerService.class);
-                    serviceIntetnt.setAction("track");
-                    startService(serviceIntetnt);
-                }
-            }, 10000);
-
-        }
+//        if(!isMyServiceRunning(DeadlineTrackerService.class)){
+//            final Handler handler = new Handler();
+//            handler.postDelayed(new Runnable() {
+//                @Override
+//                public void run() {
+//                    Intent serviceIntetnt = new Intent(MainActivity.this,DeadlineTrackerService.class);
+//                    serviceIntetnt.setAction("track");
+//                    startService(serviceIntetnt);
+//                }
+//            }, 10000);
+//
+//        }
 
 //        SharedPreferences settings = getSharedPreferences(QuickPreferences.appStatusSharedPreference, 0);
 //        if(settings.getInt("firstTime",1) == 1){
@@ -411,6 +414,7 @@ public class MainActivity extends AppCompatActivity
         } else if(id == R.id.logout_menu_item)
         {
             Reptile.hasLoggedIn = false;
+            FirebaseAuth.getInstance().signOut();
 //            if(Reptile.loginMethod(getApplicationContext())==Reptile.FACEBOOK_LOGIN) {
 //                LoginManager.getInstance().logOut();
 //
@@ -423,24 +427,24 @@ public class MainActivity extends AppCompatActivity
 //                Reptile.doRestart();
 //                startActivity(new Intent(this,splash.class));
 //            }
-            if(Reptile.loginMethod(getApplicationContext())==Reptile.GOOGLE_LOGIN)
-            {
-                if(Reptile.loginMethod(getApplicationContext())==Reptile.GOOGLE_LOGIN)
-                {
-                    SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
-                    editor.remove(QuickPreferences.tokenExpiry);
-                    editor.remove(QuickPreferences.accesstoken);
-                    editor.remove(QuickPreferences.accountid);
-                    editor.remove(QuickPreferences.loginType);
-                    editor.commit();
-                    Auth.GoogleSignInApi.signOut(Reptile.mGoogleApiClient).setResultCallback(new ResultCallback<Status>() {
-                        @Override
-                        public void onResult(@NonNull Status status) {
-                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-                        }
-                    });
-                }
-            }
+//            if(Reptile.loginMethod(getApplicationContext())==Reptile.GOOGLE_LOGIN)
+//            {
+//                if(Reptile.loginMethod(getApplicationContext())==Reptile.GOOGLE_LOGIN)
+//                {
+//                    SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+//                    editor.remove(QuickPreferences.tokenExpiry);
+//                    editor.remove(QuickPreferences.accesstoken);
+//                    editor.remove(QuickPreferences.accountid);
+//                    editor.remove(QuickPreferences.loginType);
+//                    editor.commit();
+//                    Auth.GoogleSignInApi.signOut(Reptile.mGoogleApiClient).setResultCallback(new ResultCallback<Status>() {
+//                        @Override
+//                        public void onResult(@NonNull Status status) {
+//                            startActivity(new Intent(getApplicationContext(),LoginActivity.class));
+//                        }
+//                    });
+//                }
+//            }
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
