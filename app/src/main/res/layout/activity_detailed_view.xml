@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    tools:mActivity="com.reptile.nomad.ReptileApp.DetailedViewActivity">
+    tools:mActivity="com.reptile.nomad.changedReptile.DetailedViewActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:padding="10dp"
             >
 
-            <com.reptile.nomad.ReptileApp.CircularNetworkImageView
+            <com.reptile.nomad.changedReptile.CircularNetworkImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:id="@+id/DPimageView"

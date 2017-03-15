@@ -21,7 +21,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/relativeLayout">
-                <com.reptile.nomad.ReptileApp.CircularNetworkImageView
+                <com.reptile.nomad.changedReptile.CircularNetworkImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:id="@+id/commenterProfileImageView"

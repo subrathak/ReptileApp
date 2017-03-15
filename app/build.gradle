@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.reptile.nomad.ReptileApp"
+        applicationId "com.reptile.nomad.changedReptile"
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 13
@@ -35,7 +35,7 @@ dependencies {
         exclude group: 'org.json', module: 'json'
     }
     compile 'com.akexorcist:RoundCornerProgressBar:2.0.3'
-    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
+//    compile 'com.facebook.android:facebook-android-sdk:[4,5)'
     compile 'com.github.jd-alexander:LikeButton:0.2.0'
     compile 'com.android.volley:volley:1.0.0'
     compile 'com.google.code.gson:gson:2.4'

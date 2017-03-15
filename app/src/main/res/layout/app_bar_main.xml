@@ -7,7 +7,7 @@
     android:fitsSystemWindows="true"
     android:id="@+id/main_layout"
     android:animateLayoutChanges="true"
-    tools:mActivity="com.reptile.nomad.ReptileApp.MainActivity">
+    tools:mActivity="com.reptile.nomad.changedReptile.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

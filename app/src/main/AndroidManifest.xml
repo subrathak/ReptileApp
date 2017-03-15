@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.reptile.nomad.ReptileApp">
+    package="com.reptile.nomad.changedReptile">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
@@ -9,7 +9,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <application
 
-        android:name=".Reptile"
+        android:name="com.reptile.nomad.changedReptile.Reptile"
         android:allowBackup="true"
         android:icon="@drawable/logoreptile"
         android:label="@string/app_name"
@@ -20,11 +20,11 @@
             android:value="@string/facebook_app_id" />
 
         <activity
-            android:name=".LoginActivity"
+            android:name="com.reptile.nomad.changedReptile.LoginActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.reptile.nomad.changedReptile.MainActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:windowSoftInputMode="stateHidden">
             <intent-filter>
@@ -33,29 +33,19 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.facebook.FacebookActivity"
-            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-            android:label="@string/app_name"
-           />
-
-        <provider
-            android:name="com.facebook.FacebookContentProvider"
-            android:authorities="com.facebook.app.FacebookContentProvider160970584305469"
-            android:exported="true" />
         <!--
              ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
         -->
         <service
-            android:name=".Services.MyMessagingService">
+            android:name="com.reptile.nomad.changedReptile.Services.MyMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
 
         <service
-            android:name=".Services.MyFirebaseInstanceIDService">
+            android:name="com.reptile.nomad.changedReptile.Services.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
             </intent-filter>
@@ -66,21 +56,21 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".CreateTaskActivity"
+            android:name="com.reptile.nomad.changedReptile.CreateTaskActivity"
             android:label="@string/title_activity_create_task"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Username"
+            android:name="com.reptile.nomad.changedReptile.Username"
             android:label="Edit Username"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DetailedViewActivity"
+        <activity android:name="com.reptile.nomad.changedReptile.DetailedViewActivity"
             android:windowSoftInputMode="adjustResize"/>
-        <activity android:name=".PreferencesActivity" />
-        <activity android:name=".ManageGroups" />
-        <activity android:name=".EditGroup" />
-        <activity android:name=".GalleryUtil"/>
+        <activity android:name="com.reptile.nomad.changedReptile.PreferencesActivity" />
+        <activity android:name="com.reptile.nomad.changedReptile.ManageGroups" />
+        <activity android:name="com.reptile.nomad.changedReptile.EditGroup" />
+        <activity android:name="com.reptile.nomad.changedReptile.GalleryUtil"/>
         <activity
-            android:name=".splash"
+            android:name="com.reptile.nomad.changedReptile.splash"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -90,16 +80,16 @@
         </activity>
 
         <service
-            android:name=".Services.DeadlineTrackerService"
+            android:name="com.reptile.nomad.changedReptile.Services.DeadlineTrackerService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".loginManually"></activity>
-        <activity android:name=".LoginActivityEmail"
+        <activity android:name="com.reptile.nomad.changedReptile.loginManually"></activity>
+        <activity android:name="com.reptile.nomad.changedReptile.LoginActivityEmail"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
-        <activity android:name=".ResetPasswordActivity"
+        <activity android:name="com.reptile.nomad.changedReptile.ResetPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
-        <activity android:name=".SignupActivity"
+        <activity android:name="com.reptile.nomad.changedReptile.SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
     </application>
 

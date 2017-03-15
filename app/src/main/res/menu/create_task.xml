@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:mActivity="com.reptile.nomad.ReptileApp.CreateTaskActivity">
+    tools:mActivity="com.reptile.nomad.changedReptile.CreateTaskActivity">
     <item
         android:id="@+id/action_example"
         android:showAsAction="withText|ifRoom"

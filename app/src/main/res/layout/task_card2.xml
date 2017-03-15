@@ -19,7 +19,7 @@
             android:elevation="14dp"
             android:padding="16dp">
 
-            <com.reptile.nomad.ReptileApp.CircularNetworkImageView
+            <com.reptile.nomad.changedReptile.CircularNetworkImageView
                 android:id="@+id/feedProfileImageView"
                 android:layout_width="30dp"
                 android:layout_height="30dp"

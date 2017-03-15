@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:mActivity="com.reptile.nomad.ReptileApp.CustomShareOptionsDialog">
+    tools:mActivity="com.reptile.nomad.changedReptile.CustomShareOptionsDialog">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
