@@ -54,6 +54,7 @@ import io.socket.emitter.Emitter;
 public class Reptile extends Application {
 //    public static final int FACEBOOK_LOGIN = 594;
     public static final int GOOGLE_LOGIN = 771;
+    public static final int EMAIL_LOGIN = 801;
     public static Socket mSocket;
     public static Reptile Instance;
     public static boolean connectedToServer = false;
@@ -129,7 +130,7 @@ public class Reptile extends Application {
                         JSONObject input = inputArray.getJSONObject(i);
                         ownTasks.put(input.getString("_id"), Task.getTaskFromJSON(input));
                     }
-                    Log.d("Add My Tasks", "Size = " + ownTasks.size());
+                    Log.d("Add My Tasks", "Size = " + inputArray.toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -142,7 +143,8 @@ public class Reptile extends Application {
                     JSONArray inputArray = new JSONArray((String) args[0]);
                     for (int i = 0; i < inputArray.length(); i++) {
                         JSONObject input = inputArray.getJSONObject(i);
-                        User.addToKnownUser(input);
+                        knownUsers.put(input.getString("_id"), User.getUserFromJSON(input));
+
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -191,6 +193,7 @@ public class Reptile extends Application {
                     Reptile.mSocket.emit("fcmtoken", refreshedToken);
                 LocalBroadcastManager.getInstance(getApplicationContext()).sendBroadcast(new Intent("logged-in"));
                 hasLoggedIn = true;
+                Reptile.mSocket.emit("addusers");
             }
         });
         mSocket.on("loginfailed", new Emitter.Listener() {

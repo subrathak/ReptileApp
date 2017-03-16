@@ -8,6 +8,7 @@ import com.reptile.nomad.changedReptile.Reptile;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
 import java.util.HashMap;
 
 /**
@@ -30,40 +31,31 @@ public class User {
         this.userName = firstName + " "+ lastName;
     }
 
-//    public User(String firstName, String lastName, String userName ){
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.userName = userName;
-//    }
-
     public static void addToKnownUser(JSONObject input)
     {
-
         try
         {
             String id = input.getString("_id");
             User newUser = new User(input.getString("firstname"),input.getString("lastname"));
             if(input.has("username")) {
                 newUser.userName = input.getString("username");
-//                if (!input.getString("username").isEmpty()) {
-//                    newUser = new User(input.getString("firstname"),input.getString("lastname"), input.getString("username"));
-//                } else {
-//                    newUser = new User(input.getString("firstname"),input.getString("lastname"));
-//                }
             }
             newUser.id=input.getString("_id");
             newUser.accountid = input.getString("accountid");
             newUser.imageURI=input.getString("imageuri");
+            newUser.email = input.getString("email");
             switch (input.getString("type"))
             {
-//                case "facebook":
-//
-//                    newUser.TYPE = Reptile.FACEBOOK_LOGIN;
-//                    break;
+
                 case "google":
 
                     newUser.TYPE = Reptile.GOOGLE_LOGIN;
                     break;
+                case "email":
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
+                    break;
+                default:
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
             }
 
             Reptile.knownUsers.put(id,newUser);
@@ -77,6 +69,38 @@ public class User {
         }
 
     }
+    public static User getUserFromJSON(JSONObject input){
+        User newUser = null;
+        try {
+            String id = input.getString("_id");
+            String email = input.getString("email");
+            String firstname = input.getString("firstname");
+            String accountid = input.getString("accountid");
+            String imageuri = input.getString("imageuri");
+            newUser = new User(firstname,firstname);
+            newUser.accountid =accountid;
+            newUser.id = id;
+            newUser.email = email;
+            newUser.imageURI = imageuri;
+            switch (input.getString("type"))
+            {
+                case "google":
+
+                    newUser.TYPE = Reptile.GOOGLE_LOGIN;
+                    break;
+                case "email":
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
+                    break;
+                default:
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
+                    break;
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Error Adding New User");
+        }
+        return newUser;
+    }
     public static User getUserFromJSONString ( String inputString)
     {
         try
@@ -85,23 +109,22 @@ public class User {
             User newUser = new User(input.getString("firstname"),input.getString("firstname"));
             if(input.has("username")) {
                 newUser.userName = input.getString("username");
-//                if (!input.getString("username").isEmpty()) {
-//                    newUser = new User(input.getString("firstname"),input.getString("lastname"), input.getString("username"));
-//                } else {
-//                    newUser = new User(input.getString("firstname"),input.getString("lastname"));
-//                }
             }
             newUser.id=input.getString("_id");
             newUser.accountid = input.getString("accountid");
             newUser.imageURI = input.getString("imageuri");
+            newUser.email = input.getString("email");
             switch (input.getString("type"))
             {
-//                case "facebook":
-//                    newUser.TYPE = Reptile.FACEBOOK_LOGIN;
-//                    break;
                 case "google":
 
                     newUser.TYPE = Reptile.GOOGLE_LOGIN;
+                    break;
+                case "email":
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
+                    break;
+                default:
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
                     break;
             }
             Log.d("Added user ",newUser.userName);
@@ -123,15 +146,11 @@ public class User {
             User newUser = new User(input.getString("firstname"),input.getString("firstname"));
             if(input.has("username")) {
                 newUser.userName = input.getString("username");
-//                if (!input.getString("username").isEmpty()) {
-//                    newUser = new User(input.getString("firstname"),input.getString("lastname"), input.getString("username"));
-//                } else {
-//                    newUser = new User(input.getString("firstname"),input.getString("lastname"));
-//                }
             }
             newUser.id=input.getString("_id");
             newUser.accountid = input.getString("accountid");
             newUser.imageURI = input.getString("imageuri");
+            newUser.email = input.getString("email");
             switch (input.getString("type"))
             {
 //                case "facebook":
@@ -140,6 +159,12 @@ public class User {
                 case "google":
 
                     newUser.TYPE = Reptile.GOOGLE_LOGIN;
+                    break;
+                case "email":
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
+                    break;
+                default:
+                    newUser.TYPE = Reptile.EMAIL_LOGIN;
                     break;
             }
             Log.d("Added user ",newUser.userName);

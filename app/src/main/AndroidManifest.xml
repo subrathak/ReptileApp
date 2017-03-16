@@ -85,8 +85,8 @@
             android:exported="true" />
 
         <activity android:name="com.reptile.nomad.changedReptile.loginManually"></activity>
-        <activity android:name="com.reptile.nomad.changedReptile.LoginActivityEmail"
-            android:theme="@style/AppTheme.NoActionBar" ></activity>
+        <!--<activity android:name="com.reptile.nomad.changedReptile.LoginActivity"-->
+            <!--android:theme="@style/AppTheme.NoActionBar" ></activity>-->
         <activity android:name="com.reptile.nomad.changedReptile.ResetPasswordActivity"
             android:theme="@style/AppTheme.NoActionBar" ></activity>
         <activity android:name="com.reptile.nomad.changedReptile.SignupActivity"

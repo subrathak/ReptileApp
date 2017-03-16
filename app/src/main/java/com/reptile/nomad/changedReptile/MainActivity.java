@@ -17,7 +17,6 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
@@ -52,10 +51,7 @@ import android.Manifest;
 //import com.facebook.Profile;
 //import com.facebook.login.LoginManager;
 //import com.facebook.login.widget.ProfilePictureView;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.ResultCallback;
-import com.google.android.gms.common.api.Status;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.iid.FirebaseInstanceId;
@@ -64,7 +60,6 @@ import com.reptile.nomad.changedReptile.Adapters.NewsFeedFragmentPagerAdapter;
 import com.reptile.nomad.changedReptile.Fragments.BlankFragment;
 import com.reptile.nomad.changedReptile.Models.User;
 import com.reptile.nomad.changedReptile.Fragments.FragmentNewsFeed;
-import com.reptile.nomad.changedReptile.Services.DeadlineTrackerService;
 import com.reptile.nomad.changedReptile.Services.MyFirebaseInstanceIDService;
 
 import org.json.JSONException;
@@ -75,8 +70,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -169,7 +162,7 @@ public class MainActivity extends AppCompatActivity
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
-                    startActivity(new Intent(MainActivity.this, LoginActivityEmail.class));
+                    startActivity(new Intent(MainActivity.this, LoginActivity.class));
                     finish();
                 }
             }
