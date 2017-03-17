@@ -112,7 +112,14 @@ public class DetailedViewActivity extends Activity {
 
         Bundle extras = getIntent().getExtras();
         taskID = extras.getString("taskID");
-        thisTask = Reptile.mAllTasks.get(taskID); // causing null object error
+        String callerID = extras.getString("callerID");
+        if(callerID.equals("own")){
+            thisTask = Reptile.ownTasks.get(taskID); // causing null object error
+        }else {
+            thisTask = Reptile.mAllTasks.get(taskID); // causing null object error
+
+        }
+//        thisTask = Reptile.mAllTasks.get(taskID); // causing null object error
 //        if (thisTask.status.isEmpty()) {
 //            detiledViewTaskStatusTV.setText("active");
 //        }else {

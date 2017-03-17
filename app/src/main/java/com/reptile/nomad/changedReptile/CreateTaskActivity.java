@@ -155,7 +155,7 @@ public class CreateTaskActivity extends AppCompatActivity implements RadioGroup.
                     Toast.makeText(getApplicationContext(),"Please enable time travelling to create deadlines in the past",Toast.LENGTH_LONG).show();
                     return;
                 }
-                Task newTask = new Task(Reptile.mUser,TaskString,now,deadline);
+                final Task newTask = new Task(Reptile.mUser,TaskString,now,deadline);
 
                 newTask.publictask = publicTask;
                 newTask.visibleTo = selectedGroups;
@@ -177,6 +177,7 @@ public class CreateTaskActivity extends AppCompatActivity implements RadioGroup.
                                         Toast.makeText(getApplicationContext(),"Task Created Successfully",Toast.LENGTH_SHORT).show();
                                     }
                                 });
+                                Reptile.ownTasks.put("123",newTask);
                                 Reptile.mSocket.emit("addtasks");
                                 TimerTask finishActivity = new TimerTask() {
                                     @Override

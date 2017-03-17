@@ -85,6 +85,7 @@ public class NewsFeedRecyclerAdapter extends RecyclerView.Adapter<NewsFeedRecycl
                 public void onClick(View v) {
                     Intent intent = new Intent(context, DetailedViewActivity.class);
                     intent.putExtra("taskID",currentTask.id);
+                    intent.putExtra("callerID", "feed");
                     context.startActivity(intent);
                 }
             });

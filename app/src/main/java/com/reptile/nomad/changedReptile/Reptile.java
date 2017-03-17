@@ -175,7 +175,6 @@ public class Reptile extends Application {
                     for (int i = 0; i < inputArray.length(); i++) {
                         JSONObject input = inputArray.getJSONObject(i);
                         mUserGroups.put(Group.getGroupFromJSON(input).id, Group.getGroupFromJSON(input));
-
                     }
                     Log.d(TAG, "Group Size = " + inputArray.length());
                 } catch (JSONException e) {
