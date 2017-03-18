@@ -126,7 +126,7 @@ public class Task {
                     newTask.status = input.getString("status");
                 }
                 Reptile.mAllTasks.put(id, newTask);
-
+                Log.d("TestStuff","All This is happening");
             }
         } catch (JSONException e) {
             e.printStackTrace();
