@@ -182,6 +182,7 @@ public class Reptile extends Application {
                 }
             }
         });
+
         mSocket.on("login", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
@@ -195,6 +196,7 @@ public class Reptile extends Application {
                 Reptile.mSocket.emit("addusers");
             }
         });
+
         mSocket.on("loginfailed", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
@@ -202,6 +204,7 @@ public class Reptile extends Application {
                 getApplicationContext().startActivity(new Intent(getApplicationContext(), LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             }
         });
+
         GoogleSignInOptions GSO = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestProfile().requestIdToken(getString(R.string.google_server_client_id)).requestEmail().build();
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, GSO)
