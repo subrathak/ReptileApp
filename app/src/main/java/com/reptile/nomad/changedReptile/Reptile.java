@@ -90,6 +90,8 @@ public class Reptile extends Application {
         ownTasks = new LinkedHashMap<>();
         mUserGroups = new LinkedHashMap<>();
         knownUsers = new LinkedHashMap<>();
+        mFollowing = new LinkedHashMap<>();
+        mFollowers = new LinkedHashMap<>();
         DeviceID = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
         URI serverURI = null;
 //        FacebookSdk.sdkInitialize(getApplicationContext());
@@ -153,7 +155,7 @@ public class Reptile extends Application {
                 }
             }
         });
-        mSocket.on("addfollowers", new Emitter.Listener() {
+        mSocket.on("fetchfollowers", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
                 try {
@@ -168,11 +170,12 @@ public class Reptile extends Application {
                 }
             }
         });
-        mSocket.on("addfollowing", new Emitter.Listener() {
+        mSocket.on("fetchfollowing", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
                 try {
                     JSONArray inputArray = new JSONArray((String) args[0]);
+                    Log.d(TAG, "followingArray " + inputArray.toString());
                     for (int i = 0; i < inputArray.length(); i++) {
                         JSONObject input = inputArray.getJSONObject(i);
                         mFollowing.put(input.getString("_id"), User.getUserFromJSON(input));

@@ -3,6 +3,7 @@ package com.reptile.nomad.changedReptile;
         import android.app.Activity;
         import android.content.DialogInterface;
         import android.os.Bundle;
+        import android.support.design.widget.FloatingActionButton;
         import android.support.v7.app.AlertDialog;
         import android.support.v7.app.AppCompatActivity;
         import android.support.v7.widget.LinearLayoutManager;
@@ -36,12 +37,10 @@ package com.reptile.nomad.changedReptile;
 public class Following extends AppCompatActivity {
     public Group selectedGroup;
     Activity mActivity;
-//    @Bind(R.id.groupNameTextView)
-//    TextView groupNameTextView;
     @Bind(R.id.followingListRecyclerView)
     RecyclerView usersListRecyclerView;
-    @Bind(R.id.addUserToGroupButton)
-    Button addUserButton;
+    @Bind(R.id.fab)
+    FloatingActionButton addUserButton;
     Timer searchUserTimer;
     HashMap<String,User> searchedUsers;
     @Override
@@ -51,7 +50,7 @@ public class Following extends AppCompatActivity {
         ButterKnife.bind(this);
         mActivity = this;
         Bundle extras = getIntent().getExtras();
-        selectedGroup =  new ArrayList<>(Reptile.mUserGroups.values()).get(extras.getInt("position"));
+//        selectedGroup =  new ArrayList<>(Reptile.mUserGroups.values()).get(extras.getInt("position"));
 //        groupNameTextView.setText(selectedGroup.name);
         final UserListRecyclerAdapter userListRecyclerAdapter = new UserListRecyclerAdapter(Reptile.mFollowing, this, new UserListRecyclerAdapter.OnDeleteUser() {
             @Override

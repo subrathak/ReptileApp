@@ -70,7 +70,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="caf9e14ad21a3c84982806a62b06feaa8f29b19c">
+        sha1="7f95fde09de067d92ddbd51ce71bda3d51e16e4d">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6224388f301e66659427582a5719e75762400075/classes.dex" />
     </item>
     <item
@@ -358,7 +358,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="5ba61991b4e53e1ba7bfa89487454456ee59813c">
+        sha1="c658fd1b7161000b0b326228ea07a654cd83c6d2">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22a044173c2041822df0bbf7b750b2d3f58ebea9/classes.dex" />
     </item>
     <item

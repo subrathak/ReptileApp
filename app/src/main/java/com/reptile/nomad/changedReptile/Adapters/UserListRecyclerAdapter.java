@@ -1,6 +1,7 @@
 package com.reptile.nomad.changedReptile.Adapters;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,7 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.reptile.nomad.changedReptile.EditGroup;
 import com.reptile.nomad.changedReptile.Models.User;
+import com.reptile.nomad.changedReptile.ProfileActivity;
 import com.reptile.nomad.changedReptile.R;
 
 import java.util.ArrayList;
@@ -79,6 +82,14 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
 
                 holder.deleteUserTextView.setVisibility(View.VISIBLE);
                 return true;
+            }
+        });
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent showDetailedGroup = new Intent(mActivity, ProfileActivity.class);
+                showDetailedGroup.putExtra("id",thisUser.id);
+                mActivity.startActivity(showDetailedGroup);
             }
         });
 
