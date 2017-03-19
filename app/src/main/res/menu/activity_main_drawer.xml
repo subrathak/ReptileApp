@@ -12,15 +12,15 @@
             <!--android:title="Groups"-->
             <!--/>-->
 
-        <!--<item-->
-            <!--android:id="@+id/nav_following"-->
-            <!--android:icon="@drawable/ic_supervisor_account_black_24dp"-->
-            <!--android:title="Following" />-->
+        <item
+            android:id="@+id/nav_following"
+            android:icon="@drawable/ic_supervisor_account_black_24dp"
+            android:title="Following" />
 
-        <!--<item-->
-            <!--android:id="@+id/nav_settings"-->
-            <!--android:icon="@drawable/ic_settings_black_24dp"-->
-            <!--android:title="Settings" />-->
+        <item
+            android:id="@+id/nav_followers"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Followers" />
     </group>
 
     <item android:title="Actions">

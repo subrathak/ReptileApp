@@ -65,6 +65,8 @@ public class Reptile extends Application {
     public static LinkedHashMap<String, Task> ownTasks;
     public static LinkedHashMap<String, User> knownUsers;
     public static LinkedHashMap<String, Group> mUserGroups;
+    public static LinkedHashMap<String, User> mFollowers;
+    public static LinkedHashMap<String, User> mFollowing;
     public static GoogleApiClient mGoogleApiClient;
     public static GoogleSignInAccount mGoogleAccount;
     LruBitmapCache mLruBitmapCache;
@@ -144,6 +146,36 @@ public class Reptile extends Application {
                     for (int i = 0; i < inputArray.length(); i++) {
                         JSONObject input = inputArray.getJSONObject(i);
                         knownUsers.put(input.getString("_id"), User.getUserFromJSON(input));
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        mSocket.on("addfollowers", new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                try {
+                    JSONArray inputArray = new JSONArray((String) args[0]);
+                    for (int i = 0; i < inputArray.length(); i++) {
+                        JSONObject input = inputArray.getJSONObject(i);
+                        mFollowers.put(input.getString("_id"), User.getUserFromJSON(input));
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+        mSocket.on("addfollowing", new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                try {
+                    JSONArray inputArray = new JSONArray((String) args[0]);
+                    for (int i = 0; i < inputArray.length(); i++) {
+                        JSONObject input = inputArray.getJSONObject(i);
+                        mFollowing.put(input.getString("_id"), User.getUserFromJSON(input));
 
                     }
                 } catch (JSONException e) {

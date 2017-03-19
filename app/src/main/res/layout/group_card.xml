@@ -1,23 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
-        android:paddingTop="20dp"
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_marginTop="20dp"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="2dp">
 
-        android:id="@+id/groupNameListTextView" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/cardview_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:src="@drawable/person3"
+                app:civ_border_color="@color/colorBackroundWhite"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <com.reptile.nomad.changedReptile.TextView_Lato
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jessyka swan"
+                    android:id="@+id/groupNameListTextView"
+                    android:textColor="@color/colorGray"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <com.reptile.nomad.changedReptile.Textview_lato_thin
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Team leader"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:gravity="center">
+
+                <com.reptile.nomad.changedReptile.TextView_Lato
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roun_rect_orange"
+                    android:text="Invite"
+                    android:textColor="#fff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
     <View
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="2dp"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:id="@+id/groupSeperatingLine"
-        android:background="#888"
-        android:layout_below="@+id/groupNameListTextView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-</RelativeLayout>
+        android:background="#888"/>
+
+
+</LinearLayout>

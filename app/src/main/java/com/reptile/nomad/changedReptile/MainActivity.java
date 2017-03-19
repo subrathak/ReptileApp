@@ -389,16 +389,16 @@ public class MainActivity extends AppCompatActivity
 //        else if (id == R.id.nav_following) {
 //
 //        }
-//        else if(id == R.id.nav_groups)
-//        {
-//            startActivity(new Intent(this,ManageGroups.class));
-//        }
-//
-//        else if (id == R.id.nav_settings) {
-//            Intent intent = new Intent(this,PreferencesActivity.class);
-//            startActivity(intent);
-//
-//        }
+        else if(id == R.id.nav_following)
+        {
+            startActivity(new Intent(this,Following.class));
+        }
+
+        else if (id == R.id.nav_followers) {
+            Intent intent = new Intent(this,Followers.class);
+            startActivity(intent);
+
+        }
         else if (id == R.id.nav_create_task) {
 
             startActivity(new Intent(getApplicationContext(),CreateTaskActivity.class));

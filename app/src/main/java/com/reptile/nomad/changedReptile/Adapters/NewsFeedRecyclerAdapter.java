@@ -17,6 +17,7 @@ import com.like.OnLikeListener;
 import com.reptile.nomad.changedReptile.DetailedViewActivity;
 import com.reptile.nomad.changedReptile.MainActivity;
 import com.reptile.nomad.changedReptile.Models.Task;
+import com.reptile.nomad.changedReptile.ProfileActivity;
 import com.reptile.nomad.changedReptile.R;
 import com.reptile.nomad.changedReptile.Reptile;
 
@@ -79,6 +80,15 @@ public class NewsFeedRecyclerAdapter extends RecyclerView.Adapter<NewsFeedRecycl
             TaskTextView = (TextView)itemView.findViewById(R.id.feedTaskTextView);
             commentCount = (TextView)itemView.findViewById(R.id.TaskCommentCount);
             taskCreatorProfilePictureView = (CircularNetworkImageView) itemView.findViewById(R.id.feedProfileImageView);
+            taskCreatorProfilePictureView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(context, ProfileActivity.class);
+                    intent.putExtra("useraccountid",currentTask.creator.accountid);
+//                    intent.putExtra("callerID", "feed");
+                    context.startActivity(intent);
+                }
+            });
             commentButton = (ImageButton)itemView.findViewById(R.id.commentOnTaskButton);
             commentButton.setOnClickListener(new View.OnClickListener() {
                 @Override

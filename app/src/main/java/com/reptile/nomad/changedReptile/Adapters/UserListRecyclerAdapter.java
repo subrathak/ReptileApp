@@ -16,9 +16,6 @@ import java.util.LinkedHashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/**
- * Created by sankarmanoj on 04/06/16.
- */
 public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecyclerAdapter.UserListViewHolder> {
     LinkedHashMap<String, User> users;
     Activity mActivity;
@@ -42,7 +39,7 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
 
     @Override
     public UserListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_user_card,null);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.user_card,null);
         return new UserListViewHolder(v);
     }
 
@@ -51,7 +48,7 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
        final User thisUser = new ArrayList<>(users.values()).get(position);
         holder.nameTextView.setText(thisUser.userName);
         Log.d(TAG,"Position "+ position + " User "+thisUser.userName);
-        holder.deleteUserTextView.setVisibility(View.GONE);
+//        holder.deleteUserTextView.setVisibility(View.GONE);
         holder.deleteUserTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,8 +91,8 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
         public UserListViewHolder(View itemView) {
             super(itemView);
             thisView = itemView;
-            deleteUserTextView = (TextView)itemView.findViewById(R.id.deleteUserTextView);
-            nameTextView = (TextView)itemView.findViewById(R.id.searchUserNameTextView);
+            deleteUserTextView = (TextView)itemView.findViewById(R.id.blockUserButton);
+            nameTextView = (TextView)itemView.findViewById(R.id.usernameTextView);
         }
     }
 }

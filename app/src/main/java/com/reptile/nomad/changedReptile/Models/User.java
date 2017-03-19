@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 import java.text.ParseException;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * Created by nomad on 12/5/16.
@@ -24,6 +25,10 @@ public class User {
     public String imageURI;
     public int TYPE;
     private String userSessionToken;
+    public List<String> followers;
+    public List<String> following;
+
+
 
     public User(String firstName, String lastName ){
         this.firstName = firstName;

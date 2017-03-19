@@ -9,11 +9,14 @@ import java.util.ArrayList;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    public String userAccountId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        Bundle extras = getIntent().getExtras();
+        userAccountId = extras.getString("useraccountid");
 
     }
 }

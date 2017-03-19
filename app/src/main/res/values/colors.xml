@@ -13,7 +13,9 @@
     <color name="windowBackground">#727272</color>
     <color name="colorHead">#363147</color>
     <color name="colorpara">#8b8a8d</color>
-
+    <color name="colorBackroundWhite">#f0f2ea</color>
+    <color name="colorOrange">#F68159</color>
+    <color name="colorLightGray">#a6abae</color>
 
 
 
@@ -33,6 +35,8 @@
     <color name="white">#FFFFFF</color>
     <color name="reptile_green">#7EAD00</color>
     <color name="beige">#cfd8dc</color>
+    <color name="colorGray">#495C67</color>
+
 
     <color name="md_red50">#ffffebee</color>
     <color name="md_red100">#ffffcdd2</color>
