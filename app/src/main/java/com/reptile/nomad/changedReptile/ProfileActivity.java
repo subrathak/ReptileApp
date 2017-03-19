@@ -15,6 +15,9 @@ import com.android.volley.toolbox.ImageLoader;
 import com.reptile.nomad.changedReptile.Models.User;
 import com.reptile.nomad.changedReptile.customfonts.MyTextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 import butterknife.Bind;
@@ -36,12 +39,19 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         Bundle extras = getIntent().getExtras();
         userAccountId = extras.getString("id");
-        Reptile.mSocket.emit("fetchuserprofile", userAccountId);
+        JSONObject useridjson = new JSONObject();
+        try {
+            useridjson.put("id", userAccountId);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        Reptile.mSocket.emit("fetchuserprofile", useridjson);
         Reptile.mSocket.on("fetchuserprofile", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
+                Log.d(TAG,args[0].toString());
                 user = User.getUserFromJSONString((String) args[0]);
-
+                populateViews();
             }
         });
     }

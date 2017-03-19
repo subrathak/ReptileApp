@@ -92,6 +92,7 @@
             android:name=".SignupActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Following" />
+        <activity android:name=".ProfileActivity"/>
         <activity android:name=".Followers"></activity>
     </application>
 

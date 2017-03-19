@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity
         auth = FirebaseAuth.getInstance();
 
         //get current user
-        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+//        final FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -408,6 +408,9 @@ public class MainActivity extends AppCompatActivity
         {
             Reptile.hasLoggedIn = false;
             FirebaseAuth.getInstance().signOut();
+            Reptile.doRestart();
+            startActivity(new Intent(this,splash.class));
+
 //            if(Reptile.loginMethod(getApplicationContext())==Reptile.FACEBOOK_LOGIN) {
 //                LoginManager.getInstance().logOut();
 //

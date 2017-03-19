@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.2.0_f311636800e465895b3feecc275f99bce83344bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -36,6 +45,15 @@
         revision="25.0.2"
         sha1="4385ccc0a88b33d182a836eadb47be55c8eb1107">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-10.0.1_5dc5c86e2af5f4f38d1f0aba4d95edd8ce47a39b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-10.0.1_5b75229d357db4086bc6cc8fe467453ea18eb9b0/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -66,11 +84,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_d8cbce4e8fc03a3a113c8799d4569b1c0125f7ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="7f95fde09de067d92ddbd51ce71bda3d51e16e4d">
+        sha1="bbabaf590a4f4d300a04027a5877dde99a28dd21">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_6224388f301e66659427582a5719e75762400075/classes.dex" />
     </item>
     <item
@@ -81,6 +108,33 @@
         revision="25.0.2"
         sha1="028f8255cb977b29cdffbfcf05caa0459686120c">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-10.0.1_e93535fd6f11f87cdf6dd1380725f2853a7f58a4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-10.0.1_33e51e0540d3dd5c8b93f991ef727dd8ac9a6b74/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-2.1.0_57ae1b7facec17edb189d4856af120f23839fe53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.0.1_1370ce9aaa262e40d2e5ee2c1c154e21db5f8747/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -102,12 +156,84 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_f9f77d44097ac4424ba6416819cb362a53f14de5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-10.0.1_eec7c4c2c325b548d2f170f9221ee749699aeb72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-10.0.1_32c0beb8e5ed03acf223579ccd4b1689acc50da6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.akexorcist/RoundCornerProgressBar/2.0.3/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="88c6386ad8356b89487b43bcaae4827b1abe999c">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.akexorcist-RoundCornerProgressBar-2.0.3_57872721cb97c3859e2ac10234b3c56301b73494/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.0_2e81e79e2b3a3c08fdfb87db08ad1598ef15dd4c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="4b17463c814bdc562fb0392fa3494063623a0904">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-10.0.1_45a1b3225f87dbaa318515d1ef0a3114984b02ea/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-10.0.1_ac08d75c0d8133e671defea63be2d5ea9bf76d2d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_7cf0e5456f82c86c13cd6d9e403d0a68be367338/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-10.0.1_54aa1d7a2ef1a93a53ae3ba908a4f4c189e6a039/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -129,12 +255,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-10.0.1_9eba3473dbed0aa9a65a72a5c02ce02be32d7504/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.2.0_f2ae14f593a5c60ded1236f24688ee6d2443bdca/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-10.0.1_8bf3ec70cdb401c6fbd872a4ee411d9afc8ab926/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -147,12 +291,39 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="df1cb17511aabbb63264a0024949d1e42502a512">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-10.0.1_4dc0f66b13c41deef85bc0636d2b54051ff01a12/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="6bb5d347ebc0c6ef3c83a905222a688da5d2f7b4">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-10.0.1_238629eddc43a1a62ccdf6d518a259115ef43faf/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-10.0.1_96749116d734ffc70e0da28d564c57c3849d7223/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.0.1_81fc22fb4ce37a9bf7f6191f7faf28d39f7fd450/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -210,6 +381,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-10.0.1_8b961dce43cd3f9e1f788093f1ae33ccc548c1cc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -219,12 +399,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.2.0_3ee45c5ee98808b27c4389a80cb3dd79f8aaa96c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.volley/volley/1.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="2cd4b982617e544728de0782d718a58ce1b06e3f">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.volley-volley-1.0.0_d6310951128e7b4757fc8dcc8cc5001e6763571d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-10.0.1_99ac5e940c887a4066ef009fe62f7a7d4e293c32/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -264,321 +462,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-10.0.1_6ab07de49a8b9761241ac4983cb1b37e9277b2bc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-10.0.1_632b5fec356a5de6971b21f615bb542c6b49e5ed/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.4_53a53684ca58a26fb05551373ed174741a0e006b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-10.0.1_e19c04f93e21c255a6f77c63df0428daa1d870b7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.0.1_6b6249731527f54cbcade97cb8e25d428a896e53/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-10.0.1_e8cee3796f5baf782c0cb80ac9cb5cd97485f2b5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-10.0.1_e824bb3e24123cd5545d1a0abfe1fd3e6dc5798e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_dfd23bcd41a8f9dd34e797331c7599def7d88dfc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.0.1_e8bc03ac70ff1041a744fc337193dccb12e06932/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_6e3dc5f36a6ffd6341fe721298c34192899fecda/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c658fd1b7161000b0b326228ea07a654cd83c6d2">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22a044173c2041822df0bbf7b750b2d3f58ebea9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_e10547f3f7138115f0027299181d80ed8f2367d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e51c2f662bb72419632af5192553c37e33890a99">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.2.0_b343ec16fd31b3a4da11d5db92702e44f69e4203/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="152de8da301561dcb0946471697a420d8f7a68c5">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.2.0_f311636800e465895b3feecc275f99bce83344bc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c6e1f361e9d61aece9dac39b77fcc98a337a144d">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-10.0.1_5b75229d357db4086bc6cc8fe467453ea18eb9b0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_d8cbce4e8fc03a3a113c8799d4569b1c0125f7ee/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="27777b3cad3c20b1acab19f6e37fe3e03371bf6e">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-10.0.1_33e51e0540d3dd5c8b93f991ef727dd8ac9a6b74/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-2.1.0_57ae1b7facec17edb189d4856af120f23839fe53/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e96c6974cf924e7ee3b230e6847d5731423388c9">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.0.1_1370ce9aaa262e40d2e5ee2c1c154e21db5f8747/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_f9f77d44097ac4424ba6416819cb362a53f14de5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9cca2818594cc5348806d6662133491e7ea0fa8d">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-10.0.1_eec7c4c2c325b548d2f170f9221ee749699aeb72/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7a64bf6dc775198eed9db9468a133adf7dfe6562">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-10.0.1_32c0beb8e5ed03acf223579ccd4b1689acc50da6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.akexorcist/RoundCornerProgressBar/2.0.3/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="88c6386ad8356b89487b43bcaae4827b1abe999c">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.akexorcist-RoundCornerProgressBar-2.0.3_57872721cb97c3859e2ac10234b3c56301b73494/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7f2420506110902f033406b25697cf97ee8c38b2">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.1.0_2e81e79e2b3a3c08fdfb87db08ad1598ef15dd4c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="09cf6aa1390f95157e8295d02be7868f568825fc">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-10.0.1_ac08d75c0d8133e671defea63be2d5ea9bf76d2d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="98476622f10715998eacf9240d6b479f12c66143">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.6.0_7cf0e5456f82c86c13cd6d9e403d0a68be367338/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="771267c5b0c7a5b348d3205dcfa1f871af7e0177">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-10.0.1_54aa1d7a2ef1a93a53ae3ba908a4f4c189e6a039/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="dd39827d2067497e60e21da48a7926000b6d4b0c">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-10.0.1_9eba3473dbed0aa9a65a72a5c02ce02be32d7504/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="92c871a22463a247e8a77a9f3fd231c278788c4a">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-10.0.1_8bf3ec70cdb401c6fbd872a4ee411d9afc8ab926/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="df1cb17511aabbb63264a0024949d1e42502a512">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-10.0.1_4dc0f66b13c41deef85bc0636d2b54051ff01a12/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2d5d113b0352ab60946fc44c518cf68fd26cbb79">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-10.0.1_96749116d734ffc70e0da28d564c57c3849d7223/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.0.1/b34c1f2d993044656e87f88970b6818e99e886ba/okhttp-3.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b34c1f2d993044656e87f88970b6818e99e886ba">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.0.1_81fc22fb4ce37a9bf7f6191f7faf28d39f7fd450/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4c829ff0ccfecb28a999ee46d9e75948dfc777a4">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-10.0.1_8b961dce43cd3f9e1f788093f1ae33ccc548c1cc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.2.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.2.0_3ee45c5ee98808b27c4389a80cb3dd79f8aaa96c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.0.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44a694d4095be84c2888764b1f7256b385c030ad">
-        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-10.0.1_99ac5e940c887a4066ef009fe62f7a7d4e293c32/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/info.hoang8f/android-segmented/1.0.6/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -588,12 +471,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8308ed003522a2ee8958311afcc4cfd0470377cd">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-10.0.1_6ab07de49a8b9761241ac4983cb1b37e9277b2bc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.2.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.2.0_a50d97a3567219202feb933d1397e8435b8303ad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-10.0.1_632b5fec356a5de6971b21f615bb542c6b49e5ed/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -633,6 +534,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0695b63d702f505b9b916e02272e3b6381bade7f">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.4_53a53684ca58a26fb05551373ed174741a0e006b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -648,6 +558,15 @@
         revision="25.0.2"
         sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.2.0_e558e6054b3a09a1c5eec55582eb9576665ead13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ba6aa5e69ef31dee57208125323cee958fc67565">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-10.0.1_e19c04f93e21c255a6f77c63df0428daa1d870b7/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -687,6 +606,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.0.1_6b6249731527f54cbcade97cb8e25d428a896e53/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
         jumboMode="true"
         optimize="true"
@@ -702,6 +630,15 @@
         revision="25.0.2"
         sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.2.0_323dd04609be3beee85fccea3951e4ada3439d84/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b955cb3a1ad6f1b6ff728ce1e0cd592c1717b440">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-10.0.1_e8cee3796f5baf782c0cb80ac9cb5cd97485f2b5/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -732,12 +669,75 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e2185aff89caeb337b1ffc36d5e525d8318e7cfe">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-10.0.1_e824bb3e24123cd5545d1a0abfe1fd3e6dc5798e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f23ad0f8e58713ff4b55f61c0bbde3830378347c">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-v4-impl-10.0.1_dfd23bcd41a8f9dd34e797331c7599def7d88dfc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.0.1_e8bc03ac70ff1041a744fc337193dccb12e06932/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_6e3dc5f36a6ffd6341fe721298c34192899fecda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.0.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="f6cf557be4dbd0282ea2388633e5378634423226">
         <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-10.0.1_be7d6e03bc7045bd0d917fcfe9e1c6e70f7744e3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0c7da4d146ecf4dd916283138205a9e6052ef5c8">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_22a044173c2041822df0bbf7b750b2d3f58ebea9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_e10547f3f7138115f0027299181d80ed8f2367d3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/exploded-aar/com.android.support/transition/25.2.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e51c2f662bb72419632af5192553c37e33890a99">
+        <dex dex="/home/nomad/Documents/androidProjects/ReptileAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.2.0_b343ec16fd31b3a4da11d5db92702e44f69e4203/classes.dex" />
     </item>
 
 </items>

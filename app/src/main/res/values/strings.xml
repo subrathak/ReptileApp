@@ -3,7 +3,10 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="server_uri">http://138.68.81.101/</string>
+    <string name="server_uri">http://10.42.0.1:3003/</string>
+
+    <!--<string name="server_uri">http://138.68.81.101/</string>-->
+
 
 
     <string name="action_settings">Settings</string>
