@@ -137,11 +137,11 @@ public class CommentsRecycerAdapterFooter extends RecyclerView.Adapter<RecyclerV
                     @Override
                     public void onClick(View view) {
                         String newComment = vh.writeComment.getText().toString();
-                        if(newComment.replace(" ","").length()<3)
-                        {
-                            Toast.makeText(context,"Comment is too small", Toast.LENGTH_LONG).show();
-                            return;
-                        }
+//                        if(newComment.replace(" ","").length()<3)
+//                        {
+//                            Toast.makeText(context,"Comment is too small", Toast.LENGTH_LONG).show();
+//                            return;
+//                        }
                         thisComment = new Comment(newComment,Reptile.mUser,thisTask);
                         taskComments.add(thisComment);
                         Reptile.mSocket.emit("createcomment",thisComment.getCreationJSON());

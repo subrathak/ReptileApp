@@ -15,10 +15,12 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -246,8 +248,8 @@ public class MainActivity extends AppCompatActivity
                         != PackageManager.PERMISSION_GRANTED) {
 
 
-                        ActivityCompat.requestPermissions(Instance,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                                MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
+                    ActivityCompat.requestPermissions(Instance,new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
+                            MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
 
 
                 }
@@ -537,22 +539,22 @@ public class MainActivity extends AppCompatActivity
 
 
 
-   public void sendProfilePicture(Bitmap bitmap)
-   {
-       String imageString = BitMapToString(bitmap);
-       JSONObject toSendToServer = new JSONObject();
-       try
-       {
-           toSendToServer.put("image",imageString);
-           toSendToServer.put("user",Reptile.mUser.id);
+    public void sendProfilePicture(Bitmap bitmap)
+    {
+        String imageString = BitMapToString(bitmap);
+        JSONObject toSendToServer = new JSONObject();
+        try
+        {
+            toSendToServer.put("image",imageString);
+            toSendToServer.put("user",Reptile.mUser.id);
 
-       }catch (JSONException e)
-       {
-           e.printStackTrace();
+        }catch (JSONException e)
+        {
+            e.printStackTrace();
 
-       }
-       Reptile.mSocket.emit("changePicture",toSendToServer);
-   }
+        }
+        Reptile.mSocket.emit("changePicture",toSendToServer);
+    }
     private boolean isMyServiceRunning(Class<?> serviceClass) {
         ActivityManager manager = (ActivityManager) getSystemService(Context.ACTIVITY_SERVICE);
         for (ActivityManager.RunningServiceInfo service : manager.getRunningServices(Integer.MAX_VALUE)) {
@@ -626,8 +628,22 @@ public class MainActivity extends AppCompatActivity
 
             if (requestCode == RESULT_CROP ) {
                 if(resultCode == Activity.RESULT_OK){
-                    Bundle extras = data.getExtras();
-                    Bitmap selectedBitmap = extras.getParcelable("data");
+
+                    Bitmap selectedBitmap = null;
+                    if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+                        Bundle extras = data.getExtras();
+                        selectedBitmap = extras.getParcelable("data");
+                    }
+                    else{
+                        Uri uri = data.getData();
+                        try {
+                            selectedBitmap= MediaStore.Images.Media.getBitmap(this.getContentResolver(),uri);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+//                    Bundle extras = data.getExtras();
+//                    Bitmap selectedBitmap = extras.getParcelable("data");
                     storeImage(selectedBitmap);
 
                     sendProfilePicture(selectedBitmap);
@@ -727,5 +743,4 @@ public class MainActivity extends AppCompatActivity
     }
 
 }
-
 

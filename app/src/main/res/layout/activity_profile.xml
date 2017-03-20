@@ -94,6 +94,7 @@
                         android:layout_width="0dp"
                         android:layout_height="30dp"
                         android:src="@drawable/like"
+                        android:id="@+id/followButton"
                         android:layout_gravity="center"/>
 
 
