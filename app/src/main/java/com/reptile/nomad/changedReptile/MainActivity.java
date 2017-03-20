@@ -17,6 +17,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.CoordinatorLayout;
@@ -60,6 +61,7 @@ import com.reptile.nomad.changedReptile.Adapters.NewsFeedFragmentPagerAdapter;
 import com.reptile.nomad.changedReptile.Fragments.BlankFragment;
 import com.reptile.nomad.changedReptile.Models.User;
 import com.reptile.nomad.changedReptile.Fragments.FragmentNewsFeed;
+import com.reptile.nomad.changedReptile.Services.DeadlineTrackerService;
 import com.reptile.nomad.changedReptile.Services.MyFirebaseInstanceIDService;
 
 import org.json.JSONException;
@@ -280,18 +282,18 @@ public class MainActivity extends AppCompatActivity
 
         Intent fcmrefresh = new Intent(this, MyFirebaseInstanceIDService.class);
         startService(fcmrefresh);
-//        if(!isMyServiceRunning(DeadlineTrackerService.class)){
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//                    Intent serviceIntetnt = new Intent(MainActivity.this,DeadlineTrackerService.class);
-//                    serviceIntetnt.setAction("track");
-//                    startService(serviceIntetnt);
-//                }
-//            }, 10000);
-//
-//        }
+        if(!isMyServiceRunning(DeadlineTrackerService.class)){
+            final Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent serviceIntetnt = new Intent(MainActivity.this,DeadlineTrackerService.class);
+                    serviceIntetnt.setAction("track");
+                    startService(serviceIntetnt);
+                }
+            }, 10000);
+
+        }
 
 //        SharedPreferences settings = getSharedPreferences(QuickPreferences.appStatusSharedPreference, 0);
 //        if(settings.getInt("firstTime",1) == 1){

@@ -33,8 +33,15 @@ public class User {
     public User(String firstName, String lastName ){
         this.firstName = firstName;
         this.lastName = lastName;
-        this.userName = firstName + " "+ lastName;
+//        this.userName = firstName + " "+ lastName;
     }
+
+    public User(String firstName, String lastName,String userName ){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+    }
+
 
     public static void addToKnownUser(JSONObject input)
     {
@@ -82,11 +89,22 @@ public class User {
             String firstname = input.getString("firstname");
             String accountid = input.getString("accountid");
             String imageuri = input.getString("imageuri");
+//            if ( username != null){
+//                newUser = new User(firstname,firstname,username);
+//            }else {
+//                newUser = new User(firstname,firstname);
+//            }
             newUser = new User(firstname,firstname);
             newUser.accountid =accountid;
             newUser.id = id;
             newUser.email = email;
             newUser.imageURI = imageuri;
+            try {
+                String username = input.getString("username");
+                newUser.userName = username;
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
             switch (input.getString("type"))
             {
                 case "google":

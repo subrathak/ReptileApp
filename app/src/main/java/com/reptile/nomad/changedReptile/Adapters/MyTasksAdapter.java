@@ -75,7 +75,7 @@ public class MyTasksAdapter extends RecyclerView.Adapter<MyTasksAdapter.TaskView
 //            ProfilePictureImageView = (ImageView)itemView.findViewById(R.id.feedProfileImageView);
             TaskTextView = (TextView)itemView.findViewById(R.id.feedTaskTextView);
             deadlineTextView = (RelativeTimeTextView) itemView.findViewById(R.id.deadlineTextView);
-            doneButton = (ImageButton)itemView.findViewById(R.id.imageButtonDone);
+            doneButton = (ImageButton)itemView.findViewById(R.id.imageButtonDoneOwn);
             deleteButton = (ImageButton)itemView.findViewById(R.id.imageButtonDelete);
             taskProgressBar = (RoundCornerProgressBar) itemView.findViewById(R.id.progressBar);
             cardView = (CardView)itemView.findViewById(R.id.card_view);
@@ -213,7 +213,7 @@ public class MyTasksAdapter extends RecyclerView.Adapter<MyTasksAdapter.TaskView
 
     @Override
     public TaskViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_task_card,parent,false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.my_task_card_new,parent,false);
         return new TaskViewHolder(v);
     }
 

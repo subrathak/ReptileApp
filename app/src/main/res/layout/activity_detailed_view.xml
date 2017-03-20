@@ -31,16 +31,24 @@
             />
 
 
-            <TextView
+            <ScrollView android:layout_height="1000dp"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="12sp"
-                android:text="Test containing the task of this user."
-                android:textColor="@color/black"
-                android:id="@+id/TaskTextViewDetailed"
                 android:layout_below="@+id/NameTextViewDetailed"
                 android:layout_alignLeft="@+id/NameTextViewDetailed"
-                android:layout_alignStart="@+id/NameTextViewDetailed" />
+                android:layout_alignStart="@+id/NameTextViewDetailed"
+                android:layout_above="@+id/progressBarDetailed"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="Test containing the task of this user."
+                    android:textColor="@color/black"
+                    android:id="@+id/TaskTextViewDetailed"
+                    />
+            </ScrollView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

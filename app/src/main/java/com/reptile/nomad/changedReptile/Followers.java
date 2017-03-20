@@ -51,12 +51,19 @@ public class Followers extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 //        selectedGroup =  new ArrayList<>(Reptile.mUserGroups.values()).get(extras.getInt("position"));
 //        groupNameTextView.setText(selectedGroup.name);
+//        if(Reptile.mFollowers == null){
+//            Reptile.mSocket.emit("fetchfollowers");
+//        }
         final UserListRecyclerAdapter userListRecyclerAdapter = new UserListRecyclerAdapter(Reptile.mFollowers, this, new UserListRecyclerAdapter.OnDeleteUser() {
             @Override
             public void onDelete(User user) {
                 Reptile.mSocket.emit("blockuser", getJSONUserAndGroup(user));
             }
         });
+        if(Reptile.mFollowers == null){
+            Reptile.mSocket.emit("fetchfollowers");
+            userListRecyclerAdapter.notifyDataSetChanged();
+        }
         usersListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         usersListRecyclerView.setAdapter(userListRecyclerAdapter);
 //        addUserButton.setOnClickListener(new View.OnClickListener() {

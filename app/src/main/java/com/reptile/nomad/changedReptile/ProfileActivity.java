@@ -26,9 +26,9 @@ import io.socket.emitter.Emitter;
 public class ProfileActivity extends AppCompatActivity {
 
     ImageLoader imageLoader = Reptile.getInstance().getImageLoader();
-    @Bind(R.id.imageView1)
-    CircularNetworkImageView imageView1;
-    @Bind(R.id.profile_username_textview)
+//    @Bind(R.id.imageView1)
+    CircularNetworkImageView profileImageView1;
+//    @Bind(R.id.profile_username_textview)
     MyTextView profile_username_textview;
     public String userAccountId;
     public String TAG = "ProfileActivity";
@@ -37,20 +37,30 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        profileImageView1 = (CircularNetworkImageView)findViewById(R.id.imageView1);
+        profile_username_textview = (MyTextView)findViewById(R.id.profile_username_textview);
         Bundle extras = getIntent().getExtras();
+        if(!Reptile.mSocket.connected())
+        {
+            Reptile.mSocket.connect();
+        }
         userAccountId = extras.getString("id");
         JSONObject useridjson = new JSONObject();
         try {
             useridjson.put("id", userAccountId);
+            useridjson.put("me",Reptile.mUser.id);
+            Reptile.mSocket.emit("fetchuserprofile", useridjson);
+            Log.d(TAG,"Event Sent to fetch profile");
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        Reptile.mSocket.emit("fetchuserprofile", useridjson);
-        Reptile.mSocket.on("fetchuserprofile", new Emitter.Listener() {
+
+        Reptile.mSocket.on("takeuserprofile", new Emitter.Listener() {
             @Override
             public void call(Object... args) {
                 Log.d(TAG,args[0].toString());
                 user = User.getUserFromJSONString((String) args[0]);
+                Reptile.mSocket.off("fetchuserprofile");
                 populateViews();
             }
         });
@@ -58,7 +68,13 @@ public class ProfileActivity extends AppCompatActivity {
 
     public void populateViews(){
         String imageurl = user.imageURI;
-        imageView1.setImageUrl(imageurl,imageLoader);
+        this.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                profileImageView1.setImageUrl(user.imageURI,imageLoader);
+            }
+        });
+//        profileImageView1.setImageUrl(imageurl,imageLoader);
         profile_username_textview.setText(user.getUserName());
     }
 }

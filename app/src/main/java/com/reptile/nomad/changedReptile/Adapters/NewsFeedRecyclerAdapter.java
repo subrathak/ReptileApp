@@ -84,7 +84,7 @@ public class NewsFeedRecyclerAdapter extends RecyclerView.Adapter<NewsFeedRecycl
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, ProfileActivity.class);
-                    intent.putExtra("useraccountid",currentTask.creator.accountid);
+                    intent.putExtra("id",currentTask.creator.id);
 //                    intent.putExtra("callerID", "feed");
                     context.startActivity(intent);
                 }
@@ -111,7 +111,7 @@ public class NewsFeedRecyclerAdapter extends RecyclerView.Adapter<NewsFeedRecycl
     public void onBindViewHolder(final TaskViewHolder holder, int position) {
         final Task currentTask = Tasks.get(position);
         String userName = currentTask.creator.getUserName();
-        holder.NameTextView.setText(userName);
+        holder.NameTextView.setText(currentTask.creator.userName);
         holder.TaskTextView.setText(currentTask.getTaskString());
         holder.likeCount.setText(currentTask.getLikes());
         holder.commentCount.setText(String.valueOf(currentTask.commentCount));

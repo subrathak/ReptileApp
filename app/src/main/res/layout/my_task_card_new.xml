@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    >
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="14dp"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/feedTaskTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/feedNameTextView"
+                android:layout_marginTop="12dp"
+                android:textSize="12sp"
+                android:text="Pending tasks go here. "
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/feedTaskTextView"
+                android:layout_marginTop="10dp">
+
+                <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                    android:layout_width="300dp"
+                    android:layout_height="12dp"
+                    android:id="@+id/progressBar"
+                    app:rcRadius="4dp"
+                    app:rcReverse="false"
+                    app:rcProgressColor="@color/reptile_green"
+                    app:rcSecondaryProgressColor="@color/reptile_green"
+                    app:rcBackgroundColor="@color/cardview_light_background"
+                    android:layout_centerVertical="false"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:src="@drawable/check_green"
+                    android:id="@+id/tickImage"
+                    android:visibility="gone"
+                    android:layout_alignTop="@+id/deadlineTextView"
+                    android:layout_toEndOf="@+id/deadlineTextView" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:padding="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageButtonDoneOwn"
+                    android:src="@drawable/ic_done_black_24dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginLeft="67dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="29dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/progressBar" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:id="@+id/imageButtonDelete"
+                    android:src="@drawable/ic_delete_forever_black_24dp"
+                    android:backgroundTint="@color/white"
+                    android:layout_marginRight="69dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:padding="30dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignEnd="@+id/progressBar" />
+
+                <com.github.curioustechizen.ago.RelativeTimeTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="deadline"
+                    android:id="@+id/deadlineTextView"
+                    android:textSize="10sp"
+                    android:layout_below="@+id/progressBar"
+                    android:layout_alignParentStart="true" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
