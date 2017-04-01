@@ -630,11 +630,12 @@ public class MainActivity extends AppCompatActivity
                 if(resultCode == Activity.RESULT_OK){
 
                     Bitmap selectedBitmap = null;
-                    if(Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+                    if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
                         Bundle extras = data.getExtras();
                         selectedBitmap = extras.getParcelable("data");
                     }
                     else{
+
                         Uri uri = data.getData();
                         try {
                             selectedBitmap= MediaStore.Images.Media.getBitmap(this.getContentResolver(),uri);

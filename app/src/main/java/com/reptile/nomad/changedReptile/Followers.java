@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,6 +37,7 @@ import io.socket.emitter.Emitter;
 public class Followers extends AppCompatActivity {
     public Group selectedGroup;
     Activity mActivity;
+    String TAG = "Followers";
     @Bind(R.id.followerListRecyclerView)
     RecyclerView usersListRecyclerView;
 //    @Bind(R.id.addUserToGroupButton)
@@ -57,7 +59,7 @@ public class Followers extends AppCompatActivity {
         final UserListRecyclerAdapter userListRecyclerAdapter = new UserListRecyclerAdapter(Reptile.mFollowers, this, new UserListRecyclerAdapter.OnDeleteUser() {
             @Override
             public void onDelete(User user) {
-                Reptile.mSocket.emit("blockuser", getJSONUserAndGroup(user));
+                Reptile.mSocket.emit("unfollow", getJSONUserAndGroup(user));
             }
         });
         if(Reptile.mFollowers == null){
@@ -66,6 +68,23 @@ public class Followers extends AppCompatActivity {
         }
         usersListRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         usersListRecyclerView.setAdapter(userListRecyclerAdapter);
+        Reptile.mSocket.on("plmnko", new Emitter.Listener() {
+            @Override
+            public void call(Object... args) {
+                String reply = (String)args[0];
+                Log.d(TAG,"Reply From Server = "+reply);
+                if(reply.equals("success")){
+                    userListRecyclerAdapter.notifyDataSetChanged();
+                }
+            }
+        });
+
+        try {
+            Reptile.mSocket.emit("plmnko",Reptile.mUser.id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 //        addUserButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -173,13 +192,20 @@ public class Followers extends AppCompatActivity {
 //        });
 
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Reptile.mSocket.emit("pkmnko",Reptile.mUser.id);
+    }
+
     public JSONObject getJSONUserAndGroup(User toAddUser)
     {
         try
         {
             JSONObject toSend = new JSONObject();
-            toSend.put("me",Reptile.mUser.id);
-            toSend.put("user",toAddUser.id);
+            toSend.put("me",toAddUser.id);
+            toSend.put("user",Reptile.mUser.id);
             return toSend;
         }
         catch (JSONException e)

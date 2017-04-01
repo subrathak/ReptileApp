@@ -10,6 +10,7 @@ package com.reptile.nomad.changedReptile;
         import android.support.v7.widget.RecyclerView;
         import android.text.Editable;
         import android.text.TextWatcher;
+        import android.util.Log;
         import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
@@ -36,6 +37,7 @@ package com.reptile.nomad.changedReptile;
 
 public class Following extends AppCompatActivity {
     public Group selectedGroup;
+    String TAG = "Following";
     Activity mActivity;
     @Bind(R.id.followingListRecyclerView)
     RecyclerView usersListRecyclerView;
@@ -50,7 +52,8 @@ public class Following extends AppCompatActivity {
         ButterKnife.bind(this);
         mActivity = this;
         Bundle extras = getIntent().getExtras();
-//        selectedGroup =  new ArrayList<>(Reptile.mUserGroups.values()).get(extras.getInt("position"));
+
+//      selectedGroup =  new ArrayList<>(Reptile.mUserGroups.values()).get(extras.getInt("position"));
 //        groupNameTextView.setText(selectedGroup.name);
         final UserListRecyclerAdapter userListRecyclerAdapter = new UserListRecyclerAdapter(Reptile.mFollowing, this, new UserListRecyclerAdapter.OnDeleteUser() {
             @Override
@@ -102,6 +105,16 @@ public class Following extends AppCompatActivity {
                 });
                 userListRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
                 userListRecycler.setAdapter(searchUserRecyclerAdapter);
+                Reptile.mSocket.on("plmnko", new Emitter.Listener() {
+                    @Override
+                    public void call(Object... args) {
+                        String reply = (String)args[0];
+                        Log.d(TAG,"Reply From Server = "+reply);
+                        if(reply.equals("success")){
+                            userListRecyclerAdapter.notifyDataSetChanged();
+                        }
+                    }
+                });
                 Reptile.mSocket.on("user-search", new Emitter.Listener() {
                     @Override
                     public void call(Object... args) {
@@ -164,6 +177,14 @@ public class Following extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+
+        try {
+            Reptile.mSocket.emit("plmnko",Reptile.mUser.id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
     }
     public JSONObject getJSONUserAndGroup(User toAddUser)

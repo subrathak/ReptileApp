@@ -38,7 +38,7 @@
 
                 <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
                     android:layout_width="300dp"
-                    android:layout_height="12dp"
+                    android:layout_height="9dp"
                     android:id="@+id/progressBar"
                     app:rcRadius="4dp"
                     app:rcReverse="false"

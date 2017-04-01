@@ -9,10 +9,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.android.volley.toolbox.ImageLoader;
+import com.reptile.nomad.changedReptile.CircularNetworkImageView;
 import com.reptile.nomad.changedReptile.EditGroup;
 import com.reptile.nomad.changedReptile.Models.User;
 import com.reptile.nomad.changedReptile.ProfileActivity;
 import com.reptile.nomad.changedReptile.R;
+import com.reptile.nomad.changedReptile.Reptile;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -23,6 +26,8 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
     LinkedHashMap<String, User> users;
     Activity mActivity;
     OnDeleteUser onDeleteUser;
+    ImageLoader imageLoader = Reptile.getInstance().getImageLoader();
+
     public interface OnDeleteUser
     {
         public void onDelete(User user);
@@ -76,6 +81,9 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
             }
         });
         holder.itemView.setLongClickable(true);
+        if(imageLoader == null)
+            imageLoader = Reptile.getInstance().getImageLoader();
+        holder.userProfileImageView.setImageUrl(thisUser.imageURI,imageLoader);
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -99,11 +107,13 @@ public class UserListRecyclerAdapter extends RecyclerView.Adapter<UserListRecycl
     {     TextView nameTextView;
         View thisView;
         TextView deleteUserTextView;
+        CircularNetworkImageView userProfileImageView;
         public UserListViewHolder(View itemView) {
             super(itemView);
             thisView = itemView;
             deleteUserTextView = (TextView)itemView.findViewById(R.id.blockUserButton);
             nameTextView = (TextView)itemView.findViewById(R.id.usernameTextView);
+            userProfileImageView = (CircularNetworkImageView)itemView.findViewById(R.id.profile_image);
         }
     }
 }
